@@ -5,8 +5,13 @@ import json
 import os
 
 # 檔案路徑
-USERS_FILE = "math_game_users.json"
-STATE_FILE = "math_game_state.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # .py 檔所在位置
+DATA_DIR = BASE_DIR  # 直接存在同一層，不再跳出到外層
+
+USERS_FILE = os.path.join(DATA_DIR, "math_game_users.json")
+STATE_FILE = os.path.join(DATA_DIR, "math_game_state.json")
+print("📁 用戶資料儲存路徑：", USERS_FILE)
+print("📁 進度資料儲存路徑：", STATE_FILE)
 
 class MathGameGUI:
     def __init__(self, master):
