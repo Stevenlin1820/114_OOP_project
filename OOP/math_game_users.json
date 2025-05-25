@@ -10,5 +10,9 @@
   "aaa": {
     "password": "123",
     "score": 0
+  },
+  "a": {
+    "password": "111",
+    "score": 39
   }
 }
